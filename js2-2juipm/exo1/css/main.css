@@ -1,0 +1,17 @@
+* {
+  height: 65px;
+}
+
+
+
+button {
+  font-size: 30PX;
+  width: 250px;
+  text-shadow: 12px 10px 1px rgb(48, 186, 205);
+}
+
+#myDiv {
+font-size: 250px;
+font-style: italic;
+color: rgb(30, 73, 154);
+}

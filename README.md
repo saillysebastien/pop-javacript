@@ -1,1 +1,1 @@
-# pop-javascript
+# JavaScript

@@ -1,0 +1,27 @@
+/*div {
+  border: 2px solid black;
+  border-radius: 6px;
+  float: left;
+  height: 100px;
+  margin-left: 5px;
+  margin-top: -50px;
+  width: 200px
+}*/
+
+
+div:nth-child(odd) {
+  border: 2px solid black;
+  border-radius: 6px;
+  float: left;
+  height: 100px;
+  width: 200px;
+}
+
+div:nth-child(even) {
+  border: 2px solid red;
+  border-radius: 6px;
+  height: 100px;
+  margin-left: 200px;
+  width: 200px;
+
+}
