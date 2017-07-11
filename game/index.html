@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Titre</title>
-  <link rel="stylesheet" href="vendor/normalize/normalize-min.css">
+  <!-- <link rel="stylesheet" href="vendor/normalize/normalize-min.css"> -->
   <link rel ="stylesheet" href="vendor/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
   <link rel ="stylesheet" href="vendor/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" />
   <link rel ="stylesheet" href="essets/css/style.css" />
@@ -15,7 +15,6 @@
 </head>
 
 <body>
-  <form id="avatar" action="index.html" method="post">
 
   <div class="container">
     <h1>Créer votre fiche de personnage:</h1>
@@ -47,17 +46,17 @@
         <input class="form-control" type="number" id="endurance" name="endurance" value="" min="0" max="100" required />
       </div>
       <p>L'addition de la force, de l'agilité et de l'endurance doit être égale à 100.</p>
-      <button type="submit" class="btn btn-default" onclick="heroes()">Valider</button>
+      <button  class="btn btn-default" onclick="fiche()">Créer votre héros</button>
     </div>
 
   </div>
     </div>
 
-</form>
+  <div id="fiche"></div>
 
   <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
   <script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-  <script> src="essets/js/script.js"</script>
+  <script src="essets/js/script.js"></script>
 </body>
 
 </html>
