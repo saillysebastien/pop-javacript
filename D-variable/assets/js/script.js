@@ -28,9 +28,6 @@ if (boolean2 != true) {
 }
 
 //boucler sur myArray et afficher toutes les valeurs qui sont différentes de true ou false
-// var pos = 2, n = 2;
-// var removeBoolean = myArray.splice(pos, n);
-// document.write(myArray + "<br />");
 
 
 for (var i = 0; i < myArray.length; i++) {
