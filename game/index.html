@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="fr">
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,9 +9,9 @@
 
   <title>Titre</title>
   <!-- <link rel="stylesheet" href="vendor/normalize/normalize-min.css"> -->
-  <link rel ="stylesheet" href="vendor/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
-  <link rel ="stylesheet" href="vendor/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" />
-  <link rel ="stylesheet" href="essets/css/style.css" />
+  <link rel="stylesheet" href="vendor/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="vendor/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" />
+  <link rel="stylesheet" href="essets/css/style.css" />
 
 </head>
 
@@ -18,42 +19,43 @@
 
   <div class="container">
     <h1>Créer votre fiche de personnage:</h1>
-    <div class="row">
 
-     <div class="form-group">
-      <div class="col-md-4">
-        <label for="lastname" class="control-label">Nom du perso :</label>
+    <div class="row">
+      <div class="form-group">
+        <div class="col-md-4">
+          <label for="name" class="control-label">Nom du perso :</label>
+        </div>
+        <div class="col-md-8">
+          <input class="form-control" type="text" id="name" name="lastname" value="" required />
+        </div>
+        <div class="col-md-4">
+          <label for="agility" class="control-label">Agilité :</label>
+        </div>
+        <div class="col-md-8">
+          <input class="form-control" type="number" id="agility" name="agility" value="" min="0" max="100" required />
+        </div>
+        <div class="col-md-4">
+          <label for="strength" class="control-label">Force :</label>
+        </div>
+        <div class="col-md-8">
+          <input class="form-control" type="number" id="strength" name="strength" value="" min="0" max="100" required />
+        </div>
+        <div class="col-md-4">
+          <label for="endurance" class="control-label">Endurance :</label>
+        </div>
+        <div class="col-md-8">
+          <input class="form-control" type="number" id="endurance" name="endurance" value="" min="0" max="100" required />
+        </div>
+        <p>L'addition de la force, de l'agilité et de l'endurance doit être égale à 100.</p>
+        <button class="btn btn-default" onclick="fiche()">Créer votre héros</button>
       </div>
-      <div class="col-md-8">
-        <input class="form-control" type="text" id="lastname" name="lastname" value="" required />
-      </div>
-      <div class="col-md-4">
-        <label for="agility" class="control-label">Agilité :</label>
-      </div>
-      <div class="col-md-8">
-        <input class="form-control" type="number" id="agility" name="agility" value="" min="0" max="100" required />
-      </div>
-      <div class="col-md-4">
-        <label for="strength" class="control-label">Force :</label>
-      </div>
-      <div class="col-md-8">
-        <input class="form-control" type="number" id="strength" name="strength" value="" min="0" max="100" required />
-      </div>
-      <div class="col-md-4">
-        <label for="endurance" class="control-label">Endurance :</label>
-      </div>
-      <div class="col-md-8">
-        <input class="form-control" type="number" id="endurance" name="endurance" value="" min="0" max="100" required />
-      </div>
-      <p>L'addition de la force, de l'agilité et de l'endurance doit être égale à 100.</p>
-      <button  class="btn btn-default" onclick="fiche()">Créer votre héros</button>
     </div>
+    <div class="row">
+      <div onload="newDiv()" id="fiche_hero()"></div>
+
+    </div><!--/.fiche finale-->
 
   </div>
-    </div>
-
-  <div id="fiche"></div>
-
   <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
   <script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
   <script src="essets/js/script.js"></script>
