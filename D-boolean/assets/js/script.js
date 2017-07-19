@@ -7,7 +7,7 @@
 // - "stock en faible quantité" si le stock est plus petit que 50
 // - "stock disponible" si le stock est plus grand ou egal à 50
 var stock = function() {
-  var valeur = document.getElementById('input').value;
+  var valeur = document.getElementById('stock').value;
   if (valeur == 0) {
     console.log("stock indisponible");
   } else if (valeur < 50) {
@@ -60,48 +60,64 @@ function go() {
   var key = document.getElementById("key").checked;
   if (gas && electric && windows && key) {
     swal("Vous avez tout fait",
-      "Tu peux partir l\'esprit tranquille",
+      "Tu peux partir l'esprit tranquille.",
       "success");
   } else if (!gas && electric && windows && key) {
     swal("Vous ne pouvez pas partir",
-      "Le gaz n\'est pas fermé",
+      "Le gaz n'est pas fermé !",
       "error");
   } else if (gas && electric && !windows && key) {
     swal("Vous ne pouvez pas partir",
-      "Les fenêtres ne sont pas fermées",
+      "Les fenêtres ne sont pas fermées !",
       "error");
   } else if (gas && !electric && windows && key) {
     swal('Vous ne pouvez pas partir',
-      "L'électricité n'est pas fermé",
+      "L'électricité n'est pas fermé !",
       "error");
   } else if (gas && electric && windows && !key) {
     swal("Vous ne pouvez pas partir",
-      "Vous n'avez pas vos clefs",
+      "Vous n'avez pas pris vos clefs !",
       "error");
   } else if (!gas && !electric && windows && key) {
     swal("Vous ne pouvez pas partir",
-      "L'électricité et le gaz n'est pas coupé",
+      "L'électricité et le gaz n'est pas coupé !",
       "error");
   } else if (!gas && electric && !windows && key) {
-    swal("Le gaz et les fenêtres ne sont pas fermés");
+    swal("Vous ne pouvez pas partir",
+      "Le gaz et les fenêtres ne sont pas fermés !",
+      "error");
   } else if (!gas && electric && windows && !key) {
-    swal("Le gaz n'est pas fermé et vous n'avez pas vos clefs");
+    swal("Vous ne pouvez pas partir",
+      "Le gaz n'est pas fermé et vous n'avez pas pris vos clefs !",
+      "error");
   } else if (gas && !electric && !windows && key) {
-    swal("L'électricité et les fenêtres ne sont pas fermés");
+    swal("Vous ne pouvez pas partir",
+      "L'électricité et les fenêtres ne sont pas fermés !",
+      "error");
   } else if (gas && !electric && windows && !key) {
-    swal("L'électricité n\'est pas fermé et vous n'avez pas vos clefs");
+    swal("Vous ne pouvez pas partir",
+      "L'électricité n'est pas fermé et vous n'avez pas pris vos clefs !",
+      "error");
   } else if (gas && electric && !windows && !key) {
-    swal("Les fenêtres ne sont pas fermés et vous n'avez pas vos clefs");
+    swal("Vous ne pouvez pas partir",
+      "Les fenêtres ne sont pas fermés et vous n'avez pas pris vos clefs !",
+      "error");
   } else if (!gas && !electric && !windows && key) {
-    swal("Le gaz, l'électricité et les fenêtres ne sont pas fermés");
+    swal("Vous ne pouvez pas partir",
+      "Le gaz, l'électricité et les fenêtres ne sont pas fermés !",
+      "error");
   } else if (gas && !electric && !windows && !key) {
-    swal("Les fenêtres, l'électricité ne sont pas fermés et vous n'avez pas vos clefs");
+    swal("Vous ne pouvez pas partir",
+      "Les fenêtres, l'électricité ne sont pas fermés et vous n'avez pas pris vos clefs !",
+      "error");
   } else if (!gas && electric && !windows && !key) {
-    swal("Le gaz,les fenêtres ne sont pas fermés et vous n'avez pas vos clefs");
+    swal("Vous ne pouvez pas partir",
+      "Le gaz, les fenêtres ne sont pas fermés et vous n'avez pas pris vos clefs !",
+      "error");
   } else if (!gas && !electric && !windows && !key) {
-    swal('Vous ne pouvez pas partir',
-      'Vous n\'avez rien fait',
-      'error');
+    swal("Vous ne pouvez pas partir",
+      "Vous n'avez rien fait !",
+      "error");
   }
 }
 
