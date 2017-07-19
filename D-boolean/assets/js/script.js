@@ -72,7 +72,7 @@ function go() {
       "error");
   } else if (gas && !electric && windows && key) {
     swal('Vous ne pouvez pas partir',
-      "L'électricité n'est pas fermé !",
+      "L'électricité n'est pas fermée !",
       "error");
   } else if (gas && electric && windows && !key) {
     swal("Vous ne pouvez pas partir",
@@ -80,7 +80,7 @@ function go() {
       "error");
   } else if (!gas && !electric && windows && key) {
     swal("Vous ne pouvez pas partir",
-      "L'électricité et le gaz n'est pas coupé !",
+      "L'électricité et le gaz ne sont pas coupés !",
       "error");
   } else if (!gas && electric && !windows && key) {
     swal("Vous ne pouvez pas partir",
@@ -92,15 +92,15 @@ function go() {
       "error");
   } else if (gas && !electric && !windows && key) {
     swal("Vous ne pouvez pas partir",
-      "L'électricité et les fenêtres ne sont pas fermés !",
+      "L'électricité et les fenêtres ne sont pas fermées !",
       "error");
   } else if (gas && !electric && windows && !key) {
     swal("Vous ne pouvez pas partir",
-      "L'électricité n'est pas fermé et vous n'avez pas pris vos clefs !",
+      "L'électricité n'est pas fermée et vous n'avez pas pris vos clefs !",
       "error");
   } else if (gas && electric && !windows && !key) {
     swal("Vous ne pouvez pas partir",
-      "Les fenêtres ne sont pas fermés et vous n'avez pas pris vos clefs !",
+      "Les fenêtres ne sont pas fermées et vous n'avez pas pris vos clefs !",
       "error");
   } else if (!gas && !electric && !windows && key) {
     swal("Vous ne pouvez pas partir",
@@ -108,7 +108,7 @@ function go() {
       "error");
   } else if (gas && !electric && !windows && !key) {
     swal("Vous ne pouvez pas partir",
-      "Les fenêtres, l'électricité ne sont pas fermés et vous n'avez pas pris vos clefs !",
+      "Les fenêtres, l'électricité ne sont pas fermées et vous n'avez pas pris vos clefs !",
       "error");
   } else if (!gas && electric && !windows && !key) {
     swal("Vous ne pouvez pas partir",
