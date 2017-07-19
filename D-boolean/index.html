@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>title</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css" />
+  <link rel="stylesheet" href="bower_components/sweetalert2/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+</head>
+
+<body>
+  <div class="container">
+    <section>
+      <h2>Exercice 1 :</h2>
+      <div class="row">
+        <div class="col-md-3">
+          <input id="input" type="number" name="stock" value="" min="0" max="100" placeholder="Stock">
+        </div>
+        <div class="col-md-9">
+          <input type="submit" name="Valider" onClick="stock()">
+        </div>
+      </div>
+    </section>
+    <div class="separated">
+
+    </div>
+
+    <!--
+
+    éléments d'interface :
+
+    cases à cocher :
+
+    - gaz éteint
+
+    - électricité éteinte
+
+    - fenêtres fermées
+    - j'ai pris la clé
+
+    - bouton de validation avec label "puis-je partir en vacance ?"
+    - une zone d'affichage de message
+    éléments de code :
+    - une fonction qui est appelé par le bouton de validation
+    - dans cette fonction il faudra développer les sections suivantes:
+    - récupération des valeurs
+    - analyse des valeurs
+    - affichage du message
+
+
+
+    message :
+    - "vous pouvez y aller" si toutes les cases sont cochées
+    - "Attendez, il reste des choses à faire" si au moins une case n'est pas cochée
+    -->
+
+    <section>
+      <h2>Exercice 2 :</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="gas">Gaz éteint</label>
+        </div>
+        <div class="col-md-8">
+          <input class="checklist-item" id="gas" type="checkbox" name="gas" value="">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <label for="electric">Electricité éteinte</label>
+        </div>
+        <div class="col-md-8">
+          <input class="checklist-item" id="electric" type="checkbox" name="electric" value="">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <label for="windows">Fenêtres fermées</label>
+        </div>
+        <div class="col-md-8">
+          <input class="checklist-item" id="windows" type="checkbox" name="windows" value="">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <label for="key">J'ai pris les clefs</label>
+        </div>
+        <div class="col-md-8">
+          <input class="checklist-item" id="key" type="checkbox" name="key" value="">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <label for="submit">Puis-je partir en vacances ?</label>
+        </div>
+        <div class="col-md-8">
+          <button id="submit"  onClick="go();" >Valider</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="message"></div>
+  </div>
+  <!--/.container-->
+  <script src="bower_components/sweetalert2/dist/sweetalert2.min.js"></script>
+  <script  src="assets/js/script.js"></script>
+</body>
+
+</html>
