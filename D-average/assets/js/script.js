@@ -6,25 +6,16 @@ var data = [{
     scores: [42, 100, 54, 65, 32]
   },
   {
-      id: 243,
-      name: "User 2",
-      scores: [76, 64, 10, 67, 64]
-    },
+    id: 243,
+    name: "User 2",
+    scores: [76, 64, 10, 67, 64]
+  },
   {
     id: 768,
     name: "User 3",
     scores: [93, 2, 56, 78, 100]
   }
 ];
-
-// var html = "";
-// html = html + "code html";
-//
-// for (var i = 0; i < data.length; i++) {
-//   html = html + "nouveau code html";
-// }
-//
-// html = html + "code html";
 
 // A partir ces données :
 // - afficher un tableau html contenant le nom des utilisateurs et leurs scores, triés par nom d'utilisateur.
@@ -57,22 +48,35 @@ for (var i = 0; i < data.length; i++) {
 html = html + "</table>"
 document.querySelector("#list-all").innerHTML = html;
 
-var average = "";
-average = average + "<table class='table table-bordered'>";
-average = average + "<h2>" + "Average" + "</h2>";
-average = average + "<thead>" + "<tr>";
-average = average + "<th class='col-md-6'>" + "Username" + "</th>";
-average = average + "<th class='col-md-6'>" + "average" + "</th>";
-average = average + "</tr>" + "</thread>";
-average = average + "<tbody>";
+//Exercice de moyenne
+
+// Définir la moyenne d'un joueur
+
+
+//envoyer vers html
+var averageScore = "";
+averageScore = averageScore + "<table class='table table-bordered'>";
+averageScore = averageScore + "<h2>" + "average" + "</h2>";
+averageScore = averageScore + "<thead>" + "<tr>";
+averageScore = averageScore + "<th class='col-md-6'>" + "Username" + "</th>";
+averageScore = averageScore + "<th class='col-md-6'>" + "Average" + "</th>";
+averageScore = averageScore + "</tr>" + "</thread>";
+averageScore = averageScore + "<tbody>";
 for (var i = 0; i < data.length; i++) {
-  average = average + "<tr>";
-  average = average + "<td class='col-md-6'>" + data[i].name + "</td>";
-  average = average + "</tr>";
-  average = average + "</tbody>";
+  var sumByUsers = 0;
+  var userScores = [data[i].scores];
+  for (var item in userScores) {
+    sumByUsers += userScores[item];
+    console.log(sum);
+  }
+
+  averageScore = averageScore + "<tr>";
+  averageScore = averageScore + "<td class='col-md-6'>" + data[i].name + "</td>";
+  averageScore = averageScore + "</tr>";
+  averageScore = averageScore + "</tbody>";
 }
-average = average + "</table>"
-document.querySelector("#list-average").innerHTML = average;
+averageScore = averageScore + "</table>"
+document.querySelector("#list-average").innerHTML = averageScore;
 
 var best = "";
 best = best + "<table class='table table-bordered'>";
