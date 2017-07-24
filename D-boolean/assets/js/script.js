@@ -71,7 +71,7 @@ function go() {
       "Les fenêtres ne sont pas fermées !",
       "error");
   } else if (gas && !electric && windows && key) {
-    swal('Vous ne pouvez pas partir',
+    swal("Vous ne pouvez pas partir",
       "L'électricité n'est pas fermée !",
       "error");
   } else if (gas && electric && windows && !key) {
