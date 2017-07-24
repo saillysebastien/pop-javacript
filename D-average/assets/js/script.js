@@ -29,6 +29,32 @@ var data = [{
 // - vous pouvez parcourir le tableau des données avec un boucle for
 // - pour lire le nom : user.name
 // - pour lire le tableau des scores : user.scores
+var sortNames = "";
+sortNames = function(a, b) {
+  if (a.name > b.name) {
+    return 1;
+  } else if (a.name < b.name) {
+    return -1;
+  } else {
+    return 0;
+  }
+}
+var sortScores = "";
+sortScores = function(a, b) {
+  if (a.score > b.score) {
+    return -1;
+  } else if (a.score < b.score) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+var sortResult = "";
+var sortScoresAndNames = function(a, b) {
+  sortResult = sortScores(a, b);
+  return sortResult == 0 ? sortNames(a, b) : sortResult;
+}
 
 var html = "";
 html = html + "<table class='table table-bordered'>";
@@ -54,6 +80,7 @@ document.querySelector("#list-all").innerHTML = html;
 
 
 //envoyer vers html
+var average = 0;
 var averageScore = "";
 averageScore = averageScore + "<table class='table table-bordered'>";
 averageScore = averageScore + "<h2>" + "average" + "</h2>";
@@ -63,15 +90,22 @@ averageScore = averageScore + "<th class='col-md-6'>" + "Average" + "</th>";
 averageScore = averageScore + "</tr>" + "</thread>";
 averageScore = averageScore + "<tbody>";
 for (var i = 0; i < data.length; i++) {
-  var sumByUsers = 0;
-  var userScores = [data[i].scores];
-  for (var item in userScores) {
-    sumByUsers += userScores[item];
-    console.log(sum);
-  }
+  var userScore = data[i].scores;
+  userScore.forEach(function() {
+    var sumScores = 0;
+    for (var i = 0; i < userScore.length; i++) {
+      sumScores += userScore[i];
+    }
+    var sum = [sumScores - 1];
+    for (var i = 0; i < sum.length; i++) {
+      average = Math.round(sum[i] / userScore.length);
+    }
+  });
+
 
   averageScore = averageScore + "<tr>";
   averageScore = averageScore + "<td class='col-md-6'>" + data[i].name + "</td>";
+  averageScore = averageScore + "<td class='col-md-6'>" + average + "</td>";
   averageScore = averageScore + "</tr>";
   averageScore = averageScore + "</tbody>";
 }
@@ -86,12 +120,23 @@ best = best + "<th class='col-md-6'>" + "Username" + "</th>";
 best = best + "<th class='col-md-6'>" + "High score" + "</th>";
 best = best + "</tr>" + "</thread>";
 best = best + "<tbody>";
-for (var i = 0; i < 5; i++) {
+for (var i = 0; i < data.length; i++) {
+  var userScore = [];
+    userScore.push({
+      user : data[i].name,
+      score: data[i].scores
+    });
+    console.log(userScore);
+}
+
+
+  for (var i = 0; i < 5; i++) {
   best = best + "<tr>";
   best = best + "<td class='col-md-6'>" + "</td>";
   best = best + "<td class='col-md-6'>" + "</td>";
   best = best + "</tr>";
   best = best + "</tbody>";
 }
+
 best = best + "</table>";
 document.querySelector("#list-best-scores").innerHTML = best;
