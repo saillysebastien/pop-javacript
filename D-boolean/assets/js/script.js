@@ -6,17 +6,23 @@
 // - "stock indisponible" si est le à 0
 // - "stock en faible quantité" si le stock est plus petit que 50
 // - "stock disponible" si le stock est plus grand ou egal à 50
-var stock = function() {
-  var valeur = document.getElementById('stock').value;
-  if (valeur == 0) {
-    console.log("stock indisponible");
-  } else if (valeur < 50) {
-    console.log("stock en faible quantité");
+function addAction() {
+  var value = document.querySelector("#stock").value;
+  value = parseInt(value);
+  var result;
+  var a = "Stock disponible.";
+  var b = "Stock en faible quantité.";
+  var c = "Stock indisponible.";
+  if (value == 0) {
+    result = c;
+  } else if (value < 50) {
+    result = b;
   } else {
-    console.log("stock disponible");
+    result = a;
   }
+  document.querySelector("#available").innerHTML = result;
 }
-
+document.querySelector("button#submit-exo1").addEventListener("click", addAction);
 // exo 1 bis :
 
 var hasValidAdress = true;

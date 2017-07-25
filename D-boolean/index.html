@@ -21,16 +21,17 @@
       <h2>Exercice 1 :</h2>
       <div class="row exo">
         <div class="col-md-4">
-          <label for="stock">L'article est il disponible ?</label>
+          <label for="stock">En quel disponibilité est disponible votre article ?</label>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-3">
           <input id="stock" type="number" name="stock" value="" min="0" max="100" placeholder="Stock">
         </div>
+        <div class="col-md-5" id="available"></div>
       </div>
 
       <div class="row submit">
         <div class="col-md-12">
-          <button class="btn btn-danger btn-sm exo1" type="button" id="submit-exo1" onClick="stock();">Valider</button>
+          <button class="btn btn-danger btn-sm exo1" type="button" id="submit-exo1" onClick="valid;">Valider</button>
         </div>
         <div id="result-stock" class="col-md-12">
         </div>

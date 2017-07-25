@@ -23,6 +23,7 @@ var fiche = function() {
       "error");
   }
 }
+function newDiv() {
 
 var agility = localStorage.getItem('agility');
 document.getElementById('agility').value = agility;
@@ -36,7 +37,6 @@ document.getElementById('endurance').value = endurance;
 var name = localStorage.getItem('name');
 document.getElementById('name').value = name;
 
-var fiche_hero = function() {
   window.onload = function() {
     localStorage.getItem('name');
     localStorage.getItem('agility');
@@ -44,3 +44,4 @@ var fiche_hero = function() {
     localStorage.getItem('endurance');
   }
 }
+document.querySelector("#fiche_hero").innerHTML = newDiv();

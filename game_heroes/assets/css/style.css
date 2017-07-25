@@ -1,0 +1,17 @@
+#left_table {
+  text-align: justify;
+  font-weight: 200;
+  color: rgb(191, 185, 188);
+  background-color: rgb(80, 85, 85);
+}
+
+#right_table {
+  text-align: center;
+  color: inherit;
+  background-color: rgb(191, 185, 188);
+}
+
+.table-bordered {
+  border: 3px;
+  border-radius: 3px 6px;
+}

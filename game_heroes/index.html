@@ -25,25 +25,25 @@
         <div class="col-md-4">
           <label for="name" class="control-label">Nom du perso :</label>
         </div>
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-8">
           <input class="form-control" type="text" id="name" name="lastname" value="" required />
         </div>
         <div class="col-md-4">
           <label for="agility" class="control-label">Agilité :</label>
         </div>
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-8">
           <input class="form-control" type="number" id="agility" name="agility" value="" min="0" max="100" required />
         </div>
         <div class="col-md-4">
           <label for="strength" class="control-label">Force :</label>
         </div>
-        <div class="col-md-4 col-md-4-offset">
+        <div class="col-md-8">
           <input class="form-control" type="number" id="strength" name="strength" value="" min="0" max="100" required />
         </div>
         <div class="col-md-4">
           <label for="endurance" class="control-label">Endurance :</label>
         </div>
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-8">
           <input class="form-control" type="number" id="endurance" name="endurance" value="" min="0" max="100" required />
         </div>
         <p>L'addition de la force, de l'agilité et de l'endurance doit être égale à 100.</p>
@@ -51,7 +51,7 @@
       </div>
     </div>
     <div class="row">
-      <div id="fiche_hero"></div>
+      <div onload="newDiv()" id="fiche_hero"></div>
 
     </div><!--/.fiche finale-->
 

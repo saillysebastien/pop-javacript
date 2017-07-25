@@ -2,6 +2,7 @@ body {
   background-color: rgb(205, 222, 196);
   color: rgb(43, 43, 59);
 }
+
 section {
   border: 1px solid black ;
 }
@@ -31,7 +32,16 @@ h2 {
   color: inherit;
 }
 
-.exo1{
+.col-md-5 {
+  width: 30%;
+  font-size: 20px;
+  font-weight: 200;
+  text-align: center;
+  color: inherit;
+  background-color: rgb(235, 250, 243);
+}
+
+.exo1 {
   margin-top: 3px;
   margin-left: -15px;
 }
