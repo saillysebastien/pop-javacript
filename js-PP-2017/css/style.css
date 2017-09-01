@@ -1,0 +1,27 @@
+html,
+body {
+  margin: 0;
+}
+
+.container {
+  padding: 0;
+}
+
+.border {
+  margin: 2px;
+  padding: 2px;
+  border: 5px;
+}
+
+a.btn.btn-success, a.btn.btn-danger {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+label.col-md-4.control-label {
+  padding-top: 7px;
+}
+
+#application {
+  padding-bottom: 50px;
+}
