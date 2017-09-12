@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <title>TP JSON: Exploitation de donnéees JSON en vanillaJS</title>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="nav">
+        <ul class="nav navbar-nav">
+          <li><a onclick="#"><i class="glyphicon glyphicon-home"></i>&nbsp;Accueil</a></li>
+          <li><a onclick="getPeoples();"><i class="glyphicon glyphicon-th-list"></i>&nbsp;Listes des personnes</a></li>
+          <li><a onclick="createPeople();"><i class="glyphicon glyphicon-plus"></i>&nbsp;Créer une personne</a></li>
+          <li><p id="number" class="navbar-text"></p></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div id="app"></div>
+  </div>
+
+
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+      <div class="nav">
+        <ul class="nav navbar-nav">
+          <li><a>2017 TP JSON/API</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</body>
+
+<script type="text/javascript" src="js/common.js"></script>
+
+</html>
